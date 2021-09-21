@@ -2,13 +2,37 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>SVG学习(9xkd.com)</title>
-    <link rel="styleSheet" type="text/css" href="./style.css">
+    <title>demo</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        div {
+            width: 50vm;
+            height: 50vh;
+            border: red 5px solid;
+        }
+    </style>
 </head>
 <body>
-<svg>
-    <ellipse  cx="100" cy="50" rx="50" ry="30" style="fill:none; stroke-width: 3; stroke:#b276be; "></ellipse>
-    <ellipse  cx="150" cy="50" rx="50" ry="30" style="fill:#26c3df; opacity: 0.5;"></ellipse>
-</svg>
+  <div class="box">
+      这是一段文字。
+  </div>
+  <script>
+    function getName() {
+      console.log(this.name);
+    }
+    let getName2 = () => {
+      console.log(this.name);
+    }
+    window.name = 'aa';
+    const box = {
+      name: 'demo'
+    }
+    getName()
+    getName2()
+
+  </script>
 </body>
-</html>   
+</html>

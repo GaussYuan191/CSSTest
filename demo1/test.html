@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 接口地址
+//    https://api.apiopen.top/getJoke
+//     1.创建对象
+    const url = 'https://api.apiopen.top/getJoke';
+    //创建对象
+    // const xhr = new XMLHttpRequest();
+    // //初始化
+    // xhr.open('GET', url);
+    // //发送
+    // xhr.send();
+    // //绑定事件，处理相应结果
+    // xhr.onreadystatechange = function() {
+    //   //判断
+    //   if (xhr.readyState === 4) {
+    //     //判断响应状态码 200-299
+    //     if (xhr.status >= 200 && xhr.status < 300) {
+    //       //表示成功
+    //       console.log(xhr.response);
+    //     } else {
+    //       console.error(xhr.status);
+    //     }
+    //   }
+    //
+    // }
+    const p = new Promise((resolve, reject) => {
+      //1.创建对象
+      const xhr = new XMLHttpRequest();
+      //2.初始化
+      /*
+       open(method, url, asyns) 有3个参数 默认第3个省略
+       参数1 请求的方式 参数2 URL 请求的地址 参数3 同步异步判断 默认ture(异步)
+       */
+      xhr.open('GET',)
+      //3.发送
+      /*
+       send(string)
+       string 发给服务器的参数 长度由服务器控制
+       */
+      xhr.send()
+      //4绑定事件，处理响应结果
+    })
+
+</script>
+
+</body>
+</html>

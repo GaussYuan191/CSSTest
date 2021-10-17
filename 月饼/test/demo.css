@@ -3,7 +3,6 @@
     --surface-color: #e98d1e;
     --light-color: #fdd526;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -15,19 +14,10 @@ body {
     background-image: linear-gradient(110deg, rgba(73, 93, 109, 1) 0%, rgba(49, 55, 82, 1) 100%);
 }
 
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
 .img {
     display: block;
     height: auto;
     max-width: 100%;
-    z-index: -1;
 }
 
 .cake {
@@ -40,17 +30,13 @@ body {
     background-color: var(--base-color);
     animation: moon 4s infinite ;
 }
-@keyframes mymove
-{
-    from {left:0px;}
-    to {left:200px;}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
 }
-
-@keyframes moon {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
-}
-
 .edge {
     background-color: var(--base-color);
     width: 100px;
@@ -62,7 +48,6 @@ body {
     top: 0;
     box-shadow: inset 0px 0px 18px rgba(0, 0, 0, .2);
 }
-
 .edge::before,
 .edge::after {
     content: '';
@@ -76,11 +61,9 @@ body {
     top: inherit;
     box-shadow: inherit;
 }
-
 .edge::before {
     transform: translateX(-50%) scale(1.03) rotateZ(-30deg);
 }
-
 .edge::after {
     transform: translateX(-50%) scale(1.03) rotateZ(-60deg);
 }
@@ -88,7 +71,6 @@ body {
 .edge:nth-child(2) {
     transform: translateX(-50%) scale(1.05) rotateZ(90deg);
 }
-
 .bevel {
     width: 250px;
     height: 250px;
@@ -99,7 +81,6 @@ body {
     box-sizing: border-box;
     transform: scale(0.93);
 }
-
 .bevel .edge {
     background-color: var(--light-color);
     box-shadow: none;
@@ -157,4 +138,3 @@ body {
     font-weight: bold;
     color: var(--light-color);
 }
-

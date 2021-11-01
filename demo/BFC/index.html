@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC</title>
+
+    <style>
+        /*
+           BFC(block formatting context 块级格式化环境)
+           bfc是一个CSS的隐含属性，可以为一个元素开启BFC，开启BFC的元素会变成一个独立的布局区域
+           开启BFC后的特点，
+           1.开启BFC的元素不会被浮动元素所覆盖
+           2.开启BFC的子元素和父元素的边距不会重叠
+           3.开启BFC的元素可以包含浮动的子元素
+
+           设置BFC的方式
+           1.设置元素的浮动(设置父元素浮动) 副作用大
+           2.设置元素为块元素 副作用大
+           3.overflow设置一个非visible
+
+
+        */
+        .outer {
+            border: 10px solid red;
+
+
+        }
+        .inner {
+
+            width: 100px;
+            height: 100px;
+            background-color: #21BDFF;
+            float: left;
+        }
+        .inner:before {
+            content: '';
+            clear: both;
+        }
+        .content {
+
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="outer">
+       <div class="inner">
+
+       </div>
+       <div class="main"></div>
+   </div>
+   <div class="content">
+
+   </div>
+</body>
+</html>

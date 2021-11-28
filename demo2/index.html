@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .aside {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .main {
+            /*overflow: auto;*/
+            /*float: right;*/
+            width: 150px;
+            height: 150px;
+            /*font-size: 30px;*/
+            background-color: #21BDFF;
+        }
+        .layout::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .aside::after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+        .layout {
+
+            /*overflow: hidden;*/
+        }
+        /*.content {*/
+        /*    width: 100%;*/
+        /*    height: 200px;*/
+        /*    float: top;*/
+        /*    background-color: green;*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+<div class="layout">
+<!--    <div class="content">neirong</div>-->
+<!--    <div class="aside">nihao</div>-->
+    <div class="main">main dbejhkjdhahkdjahek jhkdhkadne jannbjdhjkx eahkjhdkejd </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用after伪类清除浮动</title>
+    <style>
+        .outer {
+            border: 10px solid red;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: #21ebff;
+            float: left;
+        }
+        .outer::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+
+</head>
+<body>
+   <div class="outer">
+       <div class="inner">
+
+       </div>
+   </div>
+</body>
+</html>

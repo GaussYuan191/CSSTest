@@ -1,0 +1,37 @@
+
+body {
+    background-color:#01000F;
+    overflow: hidden;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+svg{
+    position:absolute;
+
+    width:100%;
+    height:100%;
+    visibility:hidden;
+    overflow:visible
+}
+
+.release{
+    top:50%;
+    left:50%;
+    position:absolute;
+    text-align:center;
+    transform:translate(-50%, -50%);
+    color:#ededed;
+    font-family:Arial, sans-serif;
+    letter-spacing:1em;
+    user-select:none;
+    pointer-events:none;
+    width:100%;
+}

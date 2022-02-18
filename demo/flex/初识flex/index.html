@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+         flex 设置元素为弹性容器
+         inline 设置为行内弹性容器
+         */
+        ul {
+            width: 800px;
+            border: 10px solid red;
+            display: flex;
+            list-style: none;
+            padding: 0px;
+            /*
+            flex-direction 指定容器中弹性元素的排列方式
+            row 默认值 水平排列 左向右 reverse 相反
+            column 纵向排列 reverse
+            flex-grow 指定弹性元素的伸缩系数 按比列分配 0 不增长
+            flex-shrink 指定弹性元素的收缩系数 0 不收缩
+            flex-warp 设置弹性元素在弹性盒子中是否自动换行
+              nowarp 默认
+              warp 元素沿主轴方向自动换行
+              warp-reverse 元素沿副轴反方向换行
+            flex-flow warp 和 disrection 的简写
+            justify-content 主轴上元素如何排列
+            flex-start 元素沿主轴起边排列
+            flex-end 元素沿主轴终边排列
+            center 元素居中排列
+            space-around 空白分布到元素两侧
+            space-between 空白均匀分布到元素间
+            space-evenly 空白分布到元素的单侧
+
+            align-items 元素间的关系 排与列的对齐方式
+            stretch 默认值 将元素的长度设置为相同的值
+            flex-start  元素不会拉伸，沿辅轴起边对齐
+            flex-end 沿辅轴终边对齐
+            center 居中对齐
+            baseline 基线对齐
+
+            align-content 空白方式
+            align-self 覆盖当前样式
+            flex-basis
+            flex 增长 缩减 基础
+            order 决定弹性元素的排列顺序
+
+          */
+            /*justify-content: space-evenly;*/
+            justify-content: flex-end;
+        }
+        li {
+            height: 100px;
+            width: 100px;
+            background-color: #bfa;
+            font-size: 50px;
+            text-align: center;
+        }
+        li:nth-child(2) {
+            background-color: pink;
+        }
+        li:nth-child(3) {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+  <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+  </ul>
+</body>
+</html>

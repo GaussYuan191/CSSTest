@@ -1,0 +1,160 @@
+:root {
+    --base-color: #db7e17;
+    --surface-color: #e98d1e;
+    --light-color: #fdd526;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    background-image: linear-gradient(110deg, rgba(73, 93, 109, 1) 0%, rgba(49, 55, 82, 1) 100%);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    z-index: -1;
+}
+
+.cake {
+    top: -490px;
+    width: 250px;
+    height: 250px;
+    left: 10px;
+    border-radius: 50%;
+    position: relative;
+    background-color: var(--base-color);
+    animation: moon 4s infinite ;
+}
+@keyframes mymove
+{
+    from {left:0px;}
+    to {left:200px;}
+}
+
+@keyframes moon {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.edge {
+    background-color: var(--base-color);
+    width: 100px;
+    height: 250px;
+    position: absolute;
+    border-radius: 50px;
+    transform: translateX(-50%) scale(1.05);
+    left: 50%;
+    top: 0;
+    box-shadow: inset 0px 0px 18px rgba(0, 0, 0, .2);
+}
+
+.edge::before,
+.edge::after {
+    content: '';
+    display: block;
+    background-color: inherit;
+    width: inherit;
+    height: inherit;
+    position: inherit;
+    border-radius: inherit;
+    left: inherit;
+    top: inherit;
+    box-shadow: inherit;
+}
+
+.edge::before {
+    transform: translateX(-50%) scale(1.03) rotateZ(-30deg);
+}
+
+.edge::after {
+    transform: translateX(-50%) scale(1.03) rotateZ(-60deg);
+}
+
+.edge:nth-child(2) {
+    transform: translateX(-50%) scale(1.05) rotateZ(90deg);
+}
+
+.bevel {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transform: scale(0.93);
+}
+
+.bevel .edge {
+    background-color: var(--light-color);
+    box-shadow: none;
+}
+
+.bevel .edge::before,
+.bevel .edge::after {
+    box-shadow: none;
+}
+
+.inner {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transform: scale(0.88);
+}
+
+.inner .edge {
+    background-color: var(--surface-color);
+    box-shadow: none;
+}
+
+.inner .edge::before,
+.inner .edge::after {
+    box-shadow: none;
+}
+
+.text {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 8px solid var(--light-color);
+    border-radius: 40px;
+
+    background-image: linear-gradient(315deg, rgba(211, 129, 18, 1) 0%, rgba(233, 141, 30, 1) 100%);
+}
+
+.text span {
+    font-size: 60px;
+    line-height: 60px;
+    width: 120px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: var(--light-color);
+}
+

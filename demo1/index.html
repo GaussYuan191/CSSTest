@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>demo</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        div {
+            width: 50vm;
+            height: 50vh;
+            border: red 5px solid;
+        }
+    </style>
+</head>
+<body>
+  <div class="box">
+      这是一段文字。
+  </div>
+  <script>
+    function getName() {
+      console.log(this.name);
+    }
+    let getName2 = () => {
+      console.log(this.name);
+    }
+    window.name = 'aa';
+    const box = {
+      name: 'demo'
+    }
+    getName()
+    getName2()
+
+  </script>
+</body>
+</html>

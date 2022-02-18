@@ -1,0 +1,17 @@
+box1 {
+  width: 100px;
+  height: 100px;
+}
+// @a 创建一个变量
+// 变量重名 使用最近的那个
+// $ 引用变量
+// & 表示上层的引用
+// :extend() 继承 可以重复使用 选择器分组
+// 选择器（） mixins 混合函数 可以给别的选择器用 可以传递变量
+// less的数值都可以运算
+@a:200px;
+.box2 {
+  background-color: #03a9f4;
+  width: @a;
+  height: @a;
+}

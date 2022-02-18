@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/jquery-1.4.js"></script>
+</head>
+
+<body>
+<fieldset>
+    <legend>处理信息</legend>
+    <table>
+        <tr>
+            <td>是否同意预约</td>
+            <td style="text-align: left;" colspan="5">
+                <input type="radio" name="sftyyy" id="sftyyy" value="1" checked onclick="xsTyyyTr();" /> 同意&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="sftyyy" id="sftyyy" value="0" onclick="jjTyyyTr();" />不同意&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="sftyyy" id="sftyyy" value="3" onclick="jjTyyyTr();" />当事人已撤销
+            </td>
+        </tr>
+
+        <tr id="wsyyjdr" style="display: ;">
+            <td width="14%" style="text-align: right;" class="tdtitleBg">预约接待人</td>
+            <td style="text-align: left;" colspan="5">
+                <select id="clr" name="clr">
+                    <option value="">请选择</option>
+                    <option value="1">接待人1</option>
+                    <option value="2">接待人2</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr id="tyyyTr" style="display: ;">
+            <td width="14%" style="text-align: right;" class="tdtitleBg">预约时间</td>
+            <td width="230px;" style="text-align: left;">
+                <div style="float: left">
+                    <input type="text" name="yysj" id="yysj" class="date" value="" style="width: 100px;" />
+                </div>
+            </td>
+            <td width="14%" style="text-align: right;" class="tdtitleBg">安排时间</td>
+            <td style="text-align: left;" colspan="3">
+                <select name="jtapsj_sw" style="width:60px;">
+                    <option value="">全部</option>
+                    <option value="1">时间1</option>
+                    <option value="2">时间2</option>
+                    <option value="3">时间3</option>
+                </select>&nbsp;
+            </td>
+        </tr>
+
+        <tr>
+            <td width="14%" style="text-align: right;" class="tdtitleBg">预约处理结果</td>
+            <td style="text-align: left;" colspan="5"><textarea name="yycljg" id="yycljg" style="width:98%;"></textarea></td>
+        </tr>
+
+    </table>
+</fieldset>
+
+<script>
+  function xsTyyyTr() {
+    document.getElementById("tyyyTr").style.display = "";
+    document.getElementById("wsyyjdr").style.display = "";
+  }
+
+  function jjTyyyTr() {
+    document.getElementById("tyyyTr").style.display = "none";
+    document.getElementById("wsyyjdr").style.display = "none";
+  }
+
+  function jjTyyyTr() {
+    document.getElementById("tyyyTr").style.display = "none";
+    document.getElementById("wsyyjdr").style.display = "none";
+  }
+</script>
+
+</body>
+
+</html>

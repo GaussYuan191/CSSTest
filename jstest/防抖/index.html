@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <button id="submit-btn">
+    提交
+    </button>
+    <script>
+        const btn = document.getElementById('submit-btn');
+        function submit () {
+            console.log("submit");
+        }
+        const debounce = (fn, delay) => {
+          let timer = null;
+          return (...args) => {
+            if (timer) {
+              clearTimeout(timer);
+            }
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = null;
+            }, delay);
+          }
+        }
+        btn.addEventListener('click',debounce(submit, 500));
+
+    </script>
+</body>
+</html>
